@@ -1,21 +1,14 @@
 {
-  "appname": "Angular Buyer",
-  "clientid": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-  "buyerid": "XXXX",
+  "appname": "Sansaire",
+  "clientid": "9C99DF54-BF90-4A9E-94BA-1E35AE3170F3",
+  "buyerid": "sansaire",
   "anonymous": false,
-  "catalogid": "XXXX",
+  "catalogid": "sansaire",
   "environment": "prod",
   "defaultstate": "home",
   "html5mode": true,
-  "bootswatchtheme": null,
+  "bootswatchtheme": "lumen",
   "scope": [
-      "BuyerReader", 
-      "MeAdmin", 
-      "MeXpAdmin", 
-      "MeAddressAdmin", 
-      "MeCreditCardAdmin", 
-      "Shopper", 
-      "PasswordReset",
-      "BuyerImpersonation"
+      "FullAccess"
     ]
 }
