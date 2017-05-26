@@ -54,7 +54,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" ui-sref="home">
-                    <oc-brand></oc-brand>
+                    <oc-brand logo-url="'https://sansaire.com/wp-content/themes/sansaire_2/includes/images/sansaire-logo.png'"></oc-brand>
                 </a>
             </div>
             <ul class="nav navbar-nav c-desktop-nav">
@@ -111,4 +111,4 @@
         </div>
     </nav>
 </header>
-<main ui-view class="container" cg-busy="application.stateLoading('base')"></main>
+<main ui-view ng-class='{"container container-smooth": !application.$state.is("home")}' style="margin:0 auto;" cg-busy="application.stateLoading('base')"></main>
