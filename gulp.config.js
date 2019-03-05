@@ -12,7 +12,7 @@ var source = './src/',
 
 try {
     var saasConfig = require(source + 'app/saas/gulp.config');
-} catch(ex) {
+} catch (ex) {
     var saasConfig = {};
 }
 
@@ -117,17 +117,16 @@ function getConstants() {
     if (process.env.apiurl && process.env.authurl) {
         result.authurl = process.env.authurl;
         result.apiurl = process.env.apiurl;
-    }
-    else if (!environment && !process.env.apiurl && !process.env.authurl) {
+    } else if (!environment && !process.env.apiurl && !process.env.authurl) {
         result.authurl = 'https://auth.ordercloud.io/oauth/token';
         result.apiurl = 'https://api.ordercloud.io';
     }
     if (process.env.clientid) result.clientid = process.env.clientid;
-    if (process.env.anonymous) result.anonymous = process.env.anonymous;
+    if (process.env.anonymous && process.env.anonymous.length) result.anonymous = Boolean(process.env.anonymous);
     if (process.env.appname) result.appname = process.env.appname;
     if (process.env.scope) result.scope = process.env.scope;
     if (process.env.ocscope) result.ocscope = process.env.ocscope;
-    if (process.env.html5mode) result.html5mode = process.env.html5mode;
+    if (process.env.html5mode && process.env.html5mode.length) result.html5mode = Boolean(process.env.html5mode);
     if (process.env.bootswatchtheme) result.bootswatchtheme = process.env.bootswatchtheme;
     if (process.env.awsaccesskeyid) result.awsaccesskeyid = process.env.awsaccesskeyid;
     if (process.env.awssecretaccesskey) result.awssecretaccesskey = process.env.awssecretaccesskey;
