@@ -1,6 +1,5 @@
 angular.module('orderCloud')
-	.controller('HomeCtrl', HomeController)
-;
+	.controller('HomeCtrl', HomeController);
 
 function HomeController(ocAppName, FeaturedProducts) {
 	var vm = this;
@@ -13,23 +12,16 @@ function HomeController(ocAppName, FeaturedProducts) {
 			Active: 0,
 			NoWrap: false
 		},
-		Slides: [
-			{
-				URL: 'assets/images/carousel1.jpg', 
-				Title: ocAppName.Watch(),
-				SubText: 'Welcome to the ' + ocAppName.Watch() + ' application',
+		Slides: [{
+				URL: 'assets/images/carousel1.jpg',
 				ID: 0
 			},
 			{
 				URL: 'assets/images/carousel2.jpg',
-				Title: 'Carousel Image Two',
-				SubText: 'This is the second image',
 				ID: 1
 			},
 			{
 				URL: 'assets/images/carousel3.jpg',
-				Title: 'Carousel Image Three',
-				SubText: 'This is the third image',
 				ID: 2
 			}
 		]
